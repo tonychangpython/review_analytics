@@ -6,7 +6,9 @@ with open('review.txt', 'r') as f:
 		count += 1
 		if count % 5 == 0: #求餘數
 			print(len(data))
-print(len(data))
-print(data[300])
-print('-----------------------')
-print(data[288])
+print('檔案讀取完了,總共有', len(data), '筆資料')
+
+sum_len = 0
+for d in data:
+	sum_len += 1
+print('每筆平均長度', sum_len/len(data))
